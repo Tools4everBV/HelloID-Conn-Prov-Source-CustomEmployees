@@ -1,0 +1,13 @@
+[
+    {
+      "key": "path",
+      "type": "input",
+      "defaultValue": "",
+      "templateOptions": {
+        "label": "Path to local folder",
+        "placeholder": "Please enter some text",
+        "description": "Please add the path to the local folder on agent",
+        "required": true
+      }
+    }
+  ]
