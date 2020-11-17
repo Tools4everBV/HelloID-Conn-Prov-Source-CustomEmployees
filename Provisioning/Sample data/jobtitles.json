@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Account manager",
+	"code":"Account manager"
+  },
+  {
+    "name": "Consultant",
+	"code":"Consultant"
+  },
+  {
+    "name": "Developer",
+	"code":"Developer"
+  },
+  {
+    "name": "Support Engineer",
+	"code":"Support Engineer"
+  },
+  {
+    "name": "Manager",
+	"code":"Manager"
+  }
+]

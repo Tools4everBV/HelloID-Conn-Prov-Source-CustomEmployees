@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Finance",
+	"code":"Finance",
+	"managerID":"9940"
+  },
+  {
+    "name": "Marketing",
+	"code":"Marketing",
+	"managerID":"9940"
+  },
+  {
+    "name": "Administration",
+	"code":"Administration",
+	"managerID":"9940"
+  },
+  {
+    "name": "Support",
+	"code":"Support",
+	"managerID":"9940"
+  },
+  {
+    "name": "Development",
+	"code":"Development",
+	"managerID":"9940"
+  }
+]
