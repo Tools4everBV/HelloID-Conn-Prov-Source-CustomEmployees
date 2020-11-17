@@ -3,7 +3,7 @@ try {
         $HRMroot = $HRMroot + "\"
     }
                 
-    if ($hasEndDate){
+    if ($hasEndDate -eq "true") {
         $ed = ([Datetime]$endDate).ToString("o")
     }else{
         $ed = $null
