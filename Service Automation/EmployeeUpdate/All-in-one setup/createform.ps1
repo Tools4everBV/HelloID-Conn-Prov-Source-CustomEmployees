@@ -458,7 +458,7 @@ try {
         $body = @{
             name = "$dataSourceName";
             type = "3";
-            model = @(@{key = "department"; type = 0}, @{key = "endDate"; type = 0}, @{key = "firstname"; type = 0}, @{key = "lastname"; type = 0}, @{key = "personNumber"; type = 0}, @{key = "prefixLastname"; type = 0}, @{key = "startDate"; type = 0}, @{key = "title"; type = 0}, , @{key = "hasEndDate"; type = 0});
+            model = @(@{key = "department"; type = 0}, @{key = "endDate"; type = 0}, @{key = "firstname"; type = 0}, @{key = "lastname"; type = 0}, @{key = "personNumber"; type = 0}, @{key = "prefixLastname"; type = 0}, @{key = "startDate"; type = 0}, @{key = "title"; type = 0}, @{key = "hasEndDate"; type = 0});
             automationTaskGUID = "$taskGetEmployeeDetailsGuid";
             input = @(@{description = ""; translateDescription = "False"; inputFieldType = "1"; key = "selectedEmployee"; type = "0"; options = "1"})
         }
