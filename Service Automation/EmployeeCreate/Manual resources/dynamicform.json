@@ -1,137 +1,143 @@
 [
     {
-      "key": "firstname",
-      "templateOptions": {
-        "label": "Givenname",
-        "required": true,
-        "placeholder": "John"
-      },
-      "type": "input",
-      "summaryVisibility": "Show",
-      "requiresTemplateOptions": true
+        "key":  "firstname",
+        "templateOptions":  {
+                                "label":  "Givenname",
+                                "required":  true,
+                                "placeholder":  "John"
+                            },
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
     },
     {
-      "key": "prefixLastname",
-      "templateOptions": {
-        "label": "prefix Lastname"
-      },
-      "type": "input",
-      "summaryVisibility": "Show",
-      "requiresTemplateOptions": true
+        "key":  "prefixLastname",
+        "templateOptions":  {
+                                "label":  "prefix Lastname"
+                            },
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
     },
     {
-      "key": "lastname",
-      "templateOptions": {
-        "label": "Lastname",
-        "required": true,
-        "placeholder": "Do"
-      },
-      "type": "input",
-      "summaryVisibility": "Show",
-      "requiresTemplateOptions": true
+        "key":  "lastname",
+        "templateOptions":  {
+                                "label":  "Lastname",
+                                "required":  true,
+                                "placeholder":  "Do"
+                            },
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
     },
     {
-      "templateOptions": {},
-      "type": "markdown",
-      "summaryVisibility": "Show",
-      "body": "---",
-      "requiresTemplateOptions": false
+        "templateOptions":  {
+
+                            },
+        "type":  "markdown",
+        "summaryVisibility":  "Show",
+        "body":  "---",
+        "requiresTemplateOptions":  false
     },
     {
-      "key": "startDate",
-      "templateOptions": {
-        "label": "Start date",
-        "dateOnly": true
-      },
-      "type": "datetime",
-      "summaryVisibility": "Show",
-      "requiresTemplateOptions": true
+        "key":  "startDate",
+        "templateOptions":  {
+                                "label":  "Start date",
+                                "dateOnly":  true
+                            },
+        "type":  "datetime",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
     },
     {
-      "key": "hasEndDate",
-      "templateOptions": {
-        "label": "Has end date",
-        "useSwitch": true,
-        "checkboxLabel": "Person has an end date"
-      },
-      "type": "boolean",
-      "defaultValue": false,
-      "summaryVisibility": "Show",
-      "requiresTemplateOptions": true
+        "key":  "hasEndDate",
+        "templateOptions":  {
+                                "label":  "Has end date",
+                                "useSwitch":  true,
+                                "checkboxLabel":  "Person has an end date"
+                            },
+        "type":  "boolean",
+        "defaultValue":  false,
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
     },
     {
-      "key": "endDate",
-      "templateOptions": {
-        "label": "End date",
-        "dateOnly": true
-      },
-      "hideExpression": "!model[\"hasEndDate\"]",
-      "type": "datetime",
-      "summaryVisibility": "Show",
-      "requiresTemplateOptions": true
+        "key":  "endDate",
+        "templateOptions":  {
+                                "label":  "End date",
+                                "dateOnly":  true
+                            },
+        "hideExpression":  "!model[\"hasEndDate\"]",
+        "type":  "datetime",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
     },
     {
-      "key": "department",
-      "templateOptions": {
-        "label": "Department",
-        "required": true,
-        "useObjects": false,
-        "useDataSource": true,
-        "useFilter": true,
-        "options": [
-          "Option 1",
-          "Option 2",
-          "Option 3"
-        ],
-        "valueField": "code",
-        "textField": "name",
-        "dataSourceConfig": {
-          "dataSourceGuid": "a02548b7-64ce-436a-a657-e07ca492f479",
-          "input": {
-            "propertyInputs": [
-              {
-                "propertyName": "SelectedEmployee",
-                "staticValue": {}
-              }
-            ]
-          }
-        }
-      },
-      "type": "dropdown",
-      "summaryVisibility": "Show",
-      "textOrLabel": "text",
-      "requiresTemplateOptions": true
+        "key":  "department",
+        "templateOptions":  {
+                                "label":  "Department",
+                                "required":  true,
+                                "useObjects":  false,
+                                "useDataSource":  true,
+                                "useFilter":  true,
+                                "options":  [
+                                                "Option 1",
+                                                "Option 2",
+                                                "Option 3"
+                                            ],
+                                "valueField":  "code",
+                                "textField":  "name",
+                                "dataSourceConfig":  {
+                                                         "dataSourceGuid":  "$dataSourceGuid_0",
+                                                         "input":  {
+                                                                       "propertyInputs":  [
+                                                                                              {
+                                                                                                  "propertyName":  "SelectedEmployee",
+                                                                                                  "staticValue":  {
+
+                                                                                                                  }
+                                                                                              }
+                                                                                          ]
+                                                                   }
+                                                     }
+                            },
+        "type":  "dropdown",
+        "summaryVisibility":  "Show",
+        "textOrLabel":  "text",
+        "requiresTemplateOptions":  true
     },
     {
-      "key": "title",
-      "templateOptions": {
-        "label": "Job title",
-        "required": true,
-        "useObjects": false,
-        "useDataSource": true,
-        "useFilter": false,
-        "options": [
-          "Option 1",
-          "Option 2",
-          "Option 3"
-        ],
-        "valueField": "code",
-        "textField": "name",
-        "dataSourceConfig": {
-          "dataSourceGuid": "9e381f5a-96ad-4b86-ae6c-87b5802f960b",
-          "input": {
-            "propertyInputs": [
-              {
-                "propertyName": "SelectedEmployee",
-                "staticValue": {}
-              }
-            ]
-          }
-        }
-      },
-      "type": "dropdown",
-      "summaryVisibility": "Show",
-      "textOrLabel": "text",
-      "requiresTemplateOptions": true
+        "key":  "title",
+        "templateOptions":  {
+                                "label":  "Job title",
+                                "required":  true,
+                                "useObjects":  false,
+                                "useDataSource":  true,
+                                "useFilter":  false,
+                                "options":  [
+                                                "Option 1",
+                                                "Option 2",
+                                                "Option 3"
+                                            ],
+                                "valueField":  "code",
+                                "textField":  "name",
+                                "dataSourceConfig":  {
+                                                         "dataSourceGuid":  "$dataSourceGuid_1",
+                                                         "input":  {
+                                                                       "propertyInputs":  [
+                                                                                              {
+                                                                                                  "propertyName":  "SelectedEmployee",
+                                                                                                  "staticValue":  {
+
+                                                                                                                  }
+                                                                                              }
+                                                                                          ]
+                                                                   }
+                                                     }
+                            },
+        "type":  "dropdown",
+        "summaryVisibility":  "Show",
+        "textOrLabel":  "text",
+        "requiresTemplateOptions":  true
     }
-  ]
+]

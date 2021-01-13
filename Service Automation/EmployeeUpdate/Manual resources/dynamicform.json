@@ -1,267 +1,271 @@
 [
     {
-      "label": "Select Employee",
-      "fields": [
-        {
-          "key": "employee",
-          "templateOptions": {
-            "label": "Employees",
-            "required": true,
-            "grid": {
-              "columns": [
-                {
-                  "headerName": "Firstname",
-                  "field": "firstname"
-                },
-                {
-                  "headerName": "Lastname",
-                  "field": "lastname"
-                },
-                {
-                  "headerName": "Prefix Lastname",
-                  "field": "prefixLastname"
-                },
-                {
-                  "headerName": "Person Number",
-                  "field": "personNumber"
-                },
-                {
-                  "headerName": "Department",
-                  "field": "department"
-                },
-                {
-                  "headerName": "Title",
-                  "field": "title"
-                },
-                {
-                  "headerName": "Start Date",
-                  "field": "startDate"
-                },
-                {
-                  "headerName": "End Date",
-                  "field": "endDate"
-                }
-              ],
-              "height": 300,
-              "rowSelection": "single"
-            },
-            "dataSourceConfig": {
-              "dataSourceGuid": "ef7226ff-5328-4fd5-827a-c357da400cf8",
-              "input": {
-                "propertyInputs": []
-              }
-            },
-            "useFilter": true
-          },
-          "type": "grid",
-          "summaryVisibility": "Hide element",
-          "requiresTemplateOptions": true
-        }
-      ]
+        "label":  "Select Employee",
+        "fields":  [
+                       {
+                           "key":  "employee",
+                           "templateOptions":  {
+                                                   "label":  "Employees",
+                                                   "required":  true,
+                                                   "grid":  {
+                                                                "columns":  [
+                                                                                {
+                                                                                    "headerName":  "Firstname",
+                                                                                    "field":  "firstname"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Lastname",
+                                                                                    "field":  "lastname"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Prefix Lastname",
+                                                                                    "field":  "prefixLastname"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Person Number",
+                                                                                    "field":  "personNumber"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Department",
+                                                                                    "field":  "department"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Title",
+                                                                                    "field":  "title"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Start Date",
+                                                                                    "field":  "startDate"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "End Date",
+                                                                                    "field":  "endDate"
+                                                                                }
+                                                                            ],
+                                                                "height":  300,
+                                                                "rowSelection":  "single"
+                                                            },
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_0",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "useFilter":  true
+                                               },
+                           "type":  "grid",
+                           "summaryVisibility":  "Hide element",
+                           "requiresTemplateOptions":  true
+                       }
+                   ]
     },
     {
-      "label": "Update Employee",
-      "fields": [
-        {
-          "key": "firstname",
-          "templateOptions": {
-            "label": "Givenname",
-            "useDependOn": true,
-            "dependOn": "employee",
-            "dependOnProperty": "firstname",
-            "placeholder": "John",
-            "required": true
-          },
-          "type": "input",
-          "summaryVisibility": "Show",
-          "requiresTemplateOptions": true
-        },
-        {
-          "key": "prefixLastname",
-          "templateOptions": {
-            "label": "prefix Lastname",
-            "useDependOn": true,
-            "dependOn": "employee",
-            "dependOnProperty": "prefixLastname"
-          },
-          "type": "input",
-          "summaryVisibility": "Show",
-          "requiresTemplateOptions": true
-        },
-        {
-          "key": "lastname",
-          "templateOptions": {
-            "label": "Lastname",
-            "useDependOn": true,
-            "dependOn": "employee",
-            "dependOnProperty": "lastname",
-            "placeholder": "Do",
-            "required": true
-          },
-          "type": "input",
-          "summaryVisibility": "Show",
-          "requiresTemplateOptions": true
-        },
-        {
-          "templateOptions": {},
-          "type": "markdown",
-          "summaryVisibility": "Show",
-          "body": "---",
-          "requiresTemplateOptions": false
-        },
-        {
-          "key": "startDate",
-          "templateOptions": {
-            "label": "Start date",
-            "dateOnly": true,
-            "useDataSource": true,
-            "displayField": "startDate",
-            "dataSourceConfig": {
-              "dataSourceGuid": "d87064c8-81f2-4df0-b9c8-1a3090867c6a",
-              "input": {
-                "propertyInputs": [
-                  {
-                    "propertyName": "selectedEmployee",
-                    "otherFieldValue": {
-                      "otherFieldKey": "employee"
-                    }
-                  }
-                ]
-              }
-            },
-            "useFilter": false
-          },
-          "type": "datetime",
-          "summaryVisibility": "Show",
-          "requiresTemplateOptions": true
-        },
-        {
-          "key": "hasEndDate",
-          "templateOptions": {
-            "label": "Has end date",
-            "useSwitch": true,
-            "checkboxLabel": "Person has an end date",
-            "useDataSource": true,
-            "displayField": "hasEndDate",
-            "dataSourceConfig": {
-              "dataSourceGuid": "d87064c8-81f2-4df0-b9c8-1a3090867c6a",
-              "input": {
-                "propertyInputs": [
-                  {
-                    "propertyName": "selectedEmployee",
-                    "otherFieldValue": {
-                      "otherFieldKey": "employee"
-                    }
-                  }
-                ]
-              }
-            },
-            "useFilter": false
-          },
-          "type": "boolean",
-          "defaultValue": false,
-          "summaryVisibility": "Show",
-          "requiresTemplateOptions": true
-        },
-        {
-          "key": "endDate",
-          "templateOptions": {
-            "label": "End date",
-            "dateOnly": true,
-            "useDataSource": true,
-            "displayField": "endDate",
-            "dataSourceConfig": {
-              "dataSourceGuid": "d87064c8-81f2-4df0-b9c8-1a3090867c6a",
-              "input": {
-                "propertyInputs": [
-                  {
-                    "propertyName": "selectedEmployee",
-                    "otherFieldValue": {
-                      "otherFieldKey": "employee"
-                    }
-                  }
-                ]
-              }
-            },
-            "useFilter": false
-          },
-          "hideExpression": "!model[\"hasEndDate\"]",
-          "type": "datetime",
-          "summaryVisibility": "Show",
-          "requiresTemplateOptions": true
-        },
-        {
-          "key": "department",
-          "templateOptions": {
-            "label": "Department",
-            "required": false,
-            "useObjects": false,
-            "useDataSource": true,
-            "useFilter": false,
-            "options": [
-              "Option 1",
-              "Option 2",
-              "Option 3"
-            ],
-            "valueField": "code",
-            "textField": "name",
-            "dataSourceConfig": {
-              "dataSourceGuid": "a02548b7-64ce-436a-a657-e07ca492f479",
-              "input": {
-                "propertyInputs": [
-                  {
-                    "propertyName": "SelectedEmployee",
-                    "otherFieldValue": {
-                      "otherFieldKey": "employee"
-                    }
-                  }
-                ]
-              }
-            },
-            "useDefault": true,
-            "defaultSelectorProperty": "selected"
-          },
-          "type": "dropdown",
-          "summaryVisibility": "Show",
-          "textOrLabel": "text",
-          "requiresTemplateOptions": true
-        },
-        {
-          "key": "title",
-          "templateOptions": {
-            "label": "Job title",
-            "required": false,
-            "useObjects": false,
-            "useDataSource": true,
-            "useFilter": false,
-            "options": [
-              "Option 1",
-              "Option 2",
-              "Option 3"
-            ],
-            "valueField": "code",
-            "textField": "name",
-            "dataSourceConfig": {
-              "dataSourceGuid": "9e381f5a-96ad-4b86-ae6c-87b5802f960b",
-              "input": {
-                "propertyInputs": [
-                  {
-                    "propertyName": "SelectedEmployee",
-                    "otherFieldValue": {
-                      "otherFieldKey": "employee"
-                    }
-                  }
-                ]
-              }
-            },
-            "useDefault": true,
-            "defaultSelectorProperty": "selected"
-          },
-          "type": "dropdown",
-          "summaryVisibility": "Show",
-          "textOrLabel": "text",
-          "requiresTemplateOptions": true
-        }
-      ]
+        "label":  "Update Employee",
+        "fields":  [
+                       {
+                           "key":  "firstname",
+                           "templateOptions":  {
+                                                   "label":  "Givenname",
+                                                   "useDependOn":  true,
+                                                   "dependOn":  "employee",
+                                                   "dependOnProperty":  "firstname",
+                                                   "placeholder":  "John",
+                                                   "required":  true
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true
+                       },
+                       {
+                           "key":  "prefixLastname",
+                           "templateOptions":  {
+                                                   "label":  "prefix Lastname",
+                                                   "useDependOn":  true,
+                                                   "dependOn":  "employee",
+                                                   "dependOnProperty":  "prefixLastname"
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true
+                       },
+                       {
+                           "key":  "lastname",
+                           "templateOptions":  {
+                                                   "label":  "Lastname",
+                                                   "useDependOn":  true,
+                                                   "dependOn":  "employee",
+                                                   "dependOnProperty":  "lastname",
+                                                   "placeholder":  "Do",
+                                                   "required":  true
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true
+                       },
+                       {
+                           "templateOptions":  {
+
+                                               },
+                           "type":  "markdown",
+                           "summaryVisibility":  "Show",
+                           "body":  "---",
+                           "requiresTemplateOptions":  false
+                       },
+                       {
+                           "key":  "startDate",
+                           "templateOptions":  {
+                                                   "label":  "Start date",
+                                                   "dateOnly":  true,
+                                                   "useDataSource":  true,
+                                                   "displayField":  "startDate",
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_1",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "selectedEmployee",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "employee"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "useFilter":  false
+                                               },
+                           "type":  "datetime",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true
+                       },
+                       {
+                           "key":  "hasEndDate",
+                           "templateOptions":  {
+                                                   "label":  "Has end date",
+                                                   "useSwitch":  true,
+                                                   "checkboxLabel":  "Person has an end date",
+                                                   "useDataSource":  true,
+                                                   "displayField":  "hasEndDate",
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_2",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "selectedEmployee",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "employee"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "useFilter":  false
+                                               },
+                           "type":  "boolean",
+                           "defaultValue":  false,
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true
+                       },
+                       {
+                           "key":  "endDate",
+                           "templateOptions":  {
+                                                   "label":  "End date",
+                                                   "dateOnly":  true,
+                                                   "useDataSource":  true,
+                                                   "displayField":  "endDate",
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_3",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "selectedEmployee",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "employee"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "useFilter":  false
+                                               },
+                           "hideExpression":  "!model[\"hasEndDate\"]",
+                           "type":  "datetime",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true
+                       },
+                       {
+                           "key":  "department",
+                           "templateOptions":  {
+                                                   "label":  "Department",
+                                                   "required":  false,
+                                                   "useObjects":  false,
+                                                   "useDataSource":  true,
+                                                   "useFilter":  false,
+                                                   "options":  [
+                                                                   "Option 1",
+                                                                   "Option 2",
+                                                                   "Option 3"
+                                                               ],
+                                                   "valueField":  "code",
+                                                   "textField":  "name",
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_4",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "SelectedEmployee",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "employee"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "useDefault":  true,
+                                                   "defaultSelectorProperty":  "selected"
+                                               },
+                           "type":  "dropdown",
+                           "summaryVisibility":  "Show",
+                           "textOrLabel":  "text",
+                           "requiresTemplateOptions":  true
+                       },
+                       {
+                           "key":  "title",
+                           "templateOptions":  {
+                                                   "label":  "Job title",
+                                                   "required":  false,
+                                                   "useObjects":  false,
+                                                   "useDataSource":  true,
+                                                   "useFilter":  false,
+                                                   "options":  [
+                                                                   "Option 1",
+                                                                   "Option 2",
+                                                                   "Option 3"
+                                                               ],
+                                                   "valueField":  "code",
+                                                   "textField":  "name",
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_5",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "SelectedEmployee",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "employee"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "useDefault":  true,
+                                                   "defaultSelectorProperty":  "selected"
+                                               },
+                           "type":  "dropdown",
+                           "summaryVisibility":  "Show",
+                           "textOrLabel":  "text",
+                           "requiresTemplateOptions":  true
+                       }
+                   ]
     }
-  ]
+]

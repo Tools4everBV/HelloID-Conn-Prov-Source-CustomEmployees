@@ -1,0 +1,14 @@
+[
+    {
+        "key":  "name",
+        "type":  0
+    },
+    {
+        "key":  "code",
+        "type":  0
+    },
+    {
+        "key":  "selected",
+        "type":  0
+    }
+]

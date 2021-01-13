@@ -1,0 +1,34 @@
+[
+    {
+        "key":  "personNumber",
+        "type":  0
+    },
+    {
+        "key":  "firstname",
+        "type":  0
+    },
+    {
+        "key":  "prefixLastname",
+        "type":  0
+    },
+    {
+        "key":  "lastname",
+        "type":  0
+    },
+    {
+        "key":  "title",
+        "type":  0
+    },
+    {
+        "key":  "department",
+        "type":  0
+    },
+    {
+        "key":  "startDate",
+        "type":  0
+    },
+    {
+        "key":  "endDate",
+        "type":  0
+    }
+]
