@@ -301,7 +301,7 @@ $tmpInput = @'
 {"description":"","translateDescription":false,"inputFieldType":1,"key":"SelectedEmployee","type":0,"options":0}
 '@ 
 $dataSourceGuid_1 = [PSCustomObject]@{} 
-Invoke-HelloIDDatasource -DatasourceName "HRM-generate-table-jobtitles" -DatasourceType "4" -DatasourceInput $tmpInput -DatasourcePsScript -$tmpPsScript -DatasourceModel $tmpModel -returnObject ([Ref]$dataSourceGuid_1) 
+Invoke-HelloIDDatasource -DatasourceName "HRM-generate-table-jobtitles" -DatasourceType "4" -DatasourceInput $tmpInput -DatasourcePsScript $tmpPsScript -DatasourceModel $tmpModel -returnObject ([Ref]$dataSourceGuid_1) 
 <# End: DataSource "HRM-generate-table-jobtitles" #>
 
 <# Begin: DataSource "HRM-generate-table-departments" #>
@@ -341,7 +341,7 @@ $tmpInput = @'
 {"description":"","translateDescription":false,"inputFieldType":1,"key":"SelectedEmployee","type":0,"options":0}
 '@ 
 $dataSourceGuid_0 = [PSCustomObject]@{} 
-Invoke-HelloIDDatasource -DatasourceName "HRM-generate-table-departments" -DatasourceType "4" -DatasourceInput $tmpInput -DatasourcePsScript -$tmpPsScript -DatasourceModel $tmpModel -returnObject ([Ref]$dataSourceGuid_0) 
+Invoke-HelloIDDatasource -DatasourceName "HRM-generate-table-departments" -DatasourceType "4" -DatasourceInput $tmpInput -DatasourcePsScript $tmpPsScript -DatasourceModel $tmpModel -returnObject ([Ref]$dataSourceGuid_0) 
 <# End: DataSource "HRM-generate-table-departments" #>
 <# End: HelloID Data sources #>
 
