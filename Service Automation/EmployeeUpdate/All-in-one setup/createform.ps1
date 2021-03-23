@@ -169,6 +169,8 @@ function Invoke-HelloIDDynamicForm {
         [parameter(Mandatory)][Ref]$returnObject
     )
     
+    $FormName = $FormName + $(if ($script:duplicateForm -eq $true) { $script:duplicateFormSuffix })
+
     try {
         try {
             $uri = ($script:PortalBaseUrl +"api/v1/forms/$FormName")
@@ -181,21 +183,21 @@ function Invoke-HelloIDDynamicForm {
             #Create Dynamic form
             $body = @{
                 Name       = $FormName;
-                FormSchema = $FormSchema
+                FormSchema = [Object[]]($FormSchema | ConvertFrom-Json)
             }
-            $body = $body | ConvertTo-Json
+            $body = ConvertTo-Json -InputObject $body -Depth 100
     
             $uri = ($script:PortalBaseUrl +"api/v1/forms")
             $response = Invoke-RestMethod -Method Post -Uri $uri -Headers $script:headers -ContentType "application/json" -Verbose:$false -Body $body
     
             $formGuid = $response.dynamicFormGUID
-            Write-ColorOutput Green "Dynamic form '$formName' created: $formGuid"
+            Write-Information "Dynamic form '$formName' created$(if ($script:debugLogging -eq $true) { ": " + $formGuid })"
         } else {
             $formGuid = $response.dynamicFormGUID
-            Write-ColorOutput Yellow "Dynamic form '$FormName' already exists: $formGuid"
+            Write-Warning "Dynamic form '$FormName' already exists$(if ($script:debugLogging -eq $true) { ": " + $formGuid })"
         }
     } catch {
-        Write-ColorOutput Red "Dynamic form '$FormName', message: $_"
+        Write-Error "Dynamic form '$FormName', message: $_"
     }
 
     $returnObject.Value = $formGuid
